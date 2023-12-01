@@ -7,16 +7,18 @@ import { UpdateLectureDto } from './dto/update-lecture.dto';
 export class LectureController {
   constructor(private readonly lectureService: LectureService) {}
 
+  /*
   @Post()
   create(@Body() createLectureDto: CreateLectureDto) {
     return this.lectureService.create(createLectureDto);
   }
+  */
 
-  @Get()
-  findAll() {
-    return this.lectureService.findAll();
+  @Get('all')
+  async getAllLectures() {
+    return await this.lectureService.findAllLectures();
   }
-
+  /*
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.lectureService.findOne(+id);
@@ -31,4 +33,5 @@ export class LectureController {
   remove(@Param('id') id: string) {
     return this.lectureService.remove(+id);
   }
+  */
 }

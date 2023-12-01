@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Code } from 'src/code/entity/code.entity';
 import { LecEval } from 'src/leceval/entity/leceval.entity';
 import { Lecture } from 'src/lecture/entity/lecture.entity';
 import { Like } from 'src/like/entity/like.entity';
@@ -8,7 +7,6 @@ import { Period } from 'src/period/entity/period.entity';
 import { Professor } from 'src/professor/entity/professor.entity';
 import { Report } from 'src/report/entity/report.entity';
 import { Section } from 'src/section/entity/section.entity';
-import { CodeModule } from './code/code.module';
 import { SectionModule } from './section/section.module';
 import { ReportModule } from './report/report.module';
 import { ProfessorModule } from './professor/professor.module';
@@ -45,7 +43,6 @@ import { UserService } from './user/user.service';
       password: '1234',
       database: 'andromeda_test',
       entities: [
-        Code,
         LecEval,
         Lecture,
         Like,
@@ -57,7 +54,6 @@ import { UserService } from './user/user.service';
       ],
       synchronize: true,
     }),
-    CodeModule,
     LecevalModule,
     LectureModule,
     LikeModule,

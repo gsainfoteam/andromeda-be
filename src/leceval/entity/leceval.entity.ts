@@ -12,7 +12,6 @@ import { Section } from 'src/section/entity/section.entity';
 import { Like } from 'src/like/entity/like.entity';
 import { Report } from 'src/report/entity/report.entity';
 
-// @ts-ignore
 @Entity('LecEval')
 export class LecEval {
   @PrimaryGeneratedColumn()

@@ -6,7 +6,6 @@ import {
   OneToMany,
   JoinColumn,
 } from 'typeorm';
-import { Code } from 'src/code/entity/code.entity';
 import { Section } from 'src/section/entity/section.entity';
 
 @Entity('Lecture')
@@ -24,11 +23,10 @@ export class Lecture {
   courseCredit: number;
 
   @Column()
-  mainCode: number;
+  department: string;
 
-  @OneToOne(() => Code)
-  @JoinColumn({ name: 'mainCode' })
-  code: Code;
+  @Column()
+  code: number;
 
   @OneToMany(() => Section, section => section.lecture)
   sections: Section[];
