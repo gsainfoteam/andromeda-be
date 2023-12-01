@@ -42,8 +42,8 @@ import { UserService } from './user/user.service';
       host: 'localhost',
       port: 3306,
       username: 'test01',
-      password: 'password',
-      database: 'andromeda-test',
+      password: '1234',
+      database: 'andromeda_test',
       entities: [
         Code,
         LecEval,
