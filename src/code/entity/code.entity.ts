@@ -15,7 +15,7 @@ export class Code {
   department: string;
 
   @Column()
-  lecture_code: string;
+  lectureCode: string;
 
   @OneToOne(() => Lecture, lecture => lecture.code)
   lecture: Lecture;
